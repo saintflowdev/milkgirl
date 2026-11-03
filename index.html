@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Молочная девочка — домашние торты на заказ в Перми</title>
+<meta name="description" content="Вкусные домашние торты на заказ в Перми. Бенто, классические и праздничные торты.">
+<meta name="theme-color" content="#fff4f6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#fff8f4;--surf:#fff;--pink:#f7d3d8;--pink2:#fbe8ea;--rose:#d9697f;--rose-d:#b84a62;--ink:#4d2a35;--mute:#8a6a73;--cream:#fdecc8;--line:#f0d9dc;--sh:0 10px 30px rgba(184,74,98,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;height:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 .95rem/1.6 Comfortaa,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;margin:0}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:.5rem}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:4rem 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:999px;padding:.85rem 1.6rem;background:var(--rose);color:#fff;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:var(--sh);transition:transform .2s,background .2s}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.ghost{background:var(--pink);color:var(--ink);box-shadow:none}
+.btn.ghost:hover{background:var(--line)}
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:21}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:Fraunces,serif;font-style:italic;font-size:1.45rem;text-decoration:none;color:var(--rose-d)}
+nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:600;padding:.3rem 0;border-bottom:2px solid transparent;transition:border-color .2s}
+nav a:hover{border-color:var(--rose)}
+.tools{display:flex;gap:.5rem;align-items:center}
+.icon{position:relative;width:46px;height:46px;border-radius:50%;border:0;background:var(--pink);cursor:pointer;display:grid;place-items:center;transition:transform .2s}
+.icon:hover{transform:scale(1.07)}
+.icon svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#count{position:absolute;top:-4px;right:-4px;min-width:21px;height:21px;border-radius:99px;background:var(--rose);color:#fff;font-size:.75rem;font-weight:700;display:grid;place-items:center;padding:0 5px}
+#count.bump{animation:bump .4s}
+@keyframes bump{50%{transform:scale(1.4)}}
+#burger{display:none}
+@media (max-width:760px){
+ #burger{display:grid}
+ nav{position:absolute;left:0;right:0;top:68px;background:var(--bg);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s}
+ nav.open{max-height:300px}
+ nav ul{flex-direction:column;gap:0;padding:.5rem 1.25rem 1rem}
+ nav a{display:block;padding:.8rem 0}
+}
+/* hero */
+.hero{padding:2.5rem 0 3.5rem;overflow:hidden}
+.hero .wrap{display:grid;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);letter-spacing:-.02em}
+.hero h1 i{color:var(--rose-d)}
+.hero p.sub{font-size:1.2rem;color:var(--mute);margin:1.2rem 0 2rem;max-width:30ch}
+.art{position:relative;aspect-ratio:1;max-width:520px;margin-inline:auto;width:100%}
+.art .blob{position:absolute;inset:6%;background:var(--pink);border-radius:46% 54% 58% 42%/52% 44% 56% 48%;animation:morph 9s ease-in-out infinite alternate}
+.art .cake{position:absolute;inset:8% 6% 4%;filter:drop-shadow(0 22px 24px rgba(184,74,98,.25));animation:float 5s ease-in-out infinite}
+.dot{position:absolute;border-radius:50%;background:var(--cream)}
+@keyframes morph{to{border-radius:58% 42% 44% 56%/44% 58% 42% 56%;transform:rotate(6deg)}}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.05fr .95fr}}
+/* perks */
+.perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:0}
+.perk{background:var(--pink2);border-radius:28px;padding:1.5rem}
+.perk b{display:block;font-family:Fraunces,serif;font-size:1.25rem;font-weight:500;margin-bottom:.3rem}
+.perk span{color:var(--mute);font-size:.95rem}
+/* catalog */
+.tabs{display:flex;gap:.5rem;overflow-x:auto;padding:1.2rem 0 1.5rem;scrollbar-width:none}
+.tab{flex:none;border:1.5px solid var(--line);background:var(--surf);border-radius:999px;padding:.55rem 1.2rem;cursor:pointer;font-weight:600;transition:.2s}
+.tab:hover{border-color:var(--rose)}
+.tab[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.4rem}
+.card{background:var(--surf);border-radius:32px;overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.card .pic{aspect-ratio:1/.85;display:grid;place-items:center;padding:1rem}
+.card .pic svg{width:78%;height:auto;transition:transform .4s}
+.card:hover .pic svg{transform:scale(1.06) rotate(-2deg)}
+.card .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.card h3{font-size:1.35rem}
+.card .d{color:var(--mute);font-size:.93rem;flex:1}
+.row{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+select,input,textarea{width:100%;border:1.5px solid var(--line);background:var(--bg);border-radius:16px;padding:.65rem .9rem}
+.card select{width:auto;flex:1;padding:.5rem .8rem;border-radius:999px}
+.price{font-family:Fraunces,serif;font-size:1.5rem;color:var(--rose-d)}
+.qty{display:inline-flex;align-items:center;background:var(--pink2);border-radius:999px}
+.qty button{width:34px;height:34px;border:0;background:none;font-size:1.2rem;cursor:pointer;border-radius:50%}
+.qty button:hover{background:var(--pink)}
+.qty span{min-width:26px;text-align:center;font-weight:700}
+.card .btn{width:100%;padding:.7rem}
+/* about */
+.about .wrap{display:grid;gap:2.5rem;align-items:center}
+.about .pic{background:var(--cream);border-radius:200px 200px 40px 40px;padding:2rem;display:grid;place-items:center;max-width:420px;margin-inline:auto;width:100%}
+.about p{font-size:1.15rem;color:var(--mute);max-width:46ch;margin-top:1rem}
+@media (min-width:860px){.about .wrap{grid-template-columns:.8fr 1.2fr}}
+/* contacts */
+.contact{background:var(--pink);border-radius:40px;padding:2.5rem 1.5rem;display:grid;gap:1.5rem}
+.contact dl{margin:0;display:grid;gap:1rem}
+.contact dt{font-size:.85rem;color:var(--mute)}
+.contact dd{margin:0;font-weight:700;font-size:1.1rem}
+@media (min-width:860px){.contact{grid-template-columns:1fr 1fr;padding:3.5rem;align-items:center}}
+footer{padding:3rem 0 6rem;border-top:1px solid var(--line);margin-top:3rem}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+footer ul{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.3rem}
+footer small{grid-column:1/-1;color:var(--mute)}
+footer .logo{font-size:1.6rem}
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:15}
+/* drawer */
+#veil{position:fixed;inset:0;background:rgba(77,42,53,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:30}
+#veil.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:31;transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;border-radius:28px 0 0 28px;padding-top:env(safe-area-inset-top,0px)}
+#drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}
+.dh h2{font-size:1.6rem;margin:0}
+.db{flex:1;overflow-y:auto;padding:1rem 1.4rem}
+.item{display:grid;grid-template-columns:62px 1fr auto;gap:.8rem;padding:.9rem 0;border-bottom:1px solid var(--line);align-items:center}
+.item .th{background:var(--pink2);border-radius:18px;padding:6px}
+.item .th svg{width:100%;height:auto;display:block}
+.item b{font-family:Fraunces,serif;font-weight:500}
+.item select{padding:.3rem .6rem;border-radius:12px;font-size:.85rem;margin:.3rem 0;width:auto}
+.item .x{border:0;background:none;color:var(--mute);cursor:pointer;font-size:.85rem;text-decoration:underline}
+.item .r{text-align:right;display:grid;gap:.4rem;justify-items:end}
+.empty{text-align:center;color:var(--mute);padding:3rem 0}
+form{display:grid;gap:.8rem;margin-top:1.4rem}
+label{font-size:.88rem;font-weight:600;display:grid;gap:.3rem}
+.err{color:#c0334f;font-size:.8rem;font-weight:400;min-height:1em}
+input.bad{border-color:#c0334f}
+.df{padding:1rem 1.4rem calc(1rem + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--surf)}
+.sum{display:flex;justify-content:space-between;font-size:1.2rem;margin-bottom:.7rem}
+.sum b{font-family:Fraunces,serif;color:var(--rose-d);font-size:1.5rem}
+.df .btn{width:100%}
+.done{background:var(--pink2);border-radius:22px;padding:1.2rem;display:grid;gap:.7rem}
+.done textarea{height:200px;font-size:.85rem}
+#toast{position:fixed;left:50%;bottom:calc(5.5rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:.9rem 1.3rem;border-radius:20px;max-width:min(92%,460px);text-align:center;opacity:0;pointer-events:none;transition:.35s;z-index:40;font-weight:600}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+:root{--bg:#fff4f6;--pink:#f9d0d9;--pink2:#fde6ea;--rose:#c0334f;--rose-d:#8f1d33;--ink:#6b1526;--mute:#9a5a68;--cream:#fde9d0;--line:#f3d0d8}
+body{background:radial-gradient(55% 35% at 8% 0,#f9c9d4 0,transparent 70%),radial-gradient(45% 30% at 100% 28%,#fbd8df 0,transparent 70%),radial-gradient(55% 35% at 0 68%,#f9cfd8 0,transparent 70%),radial-gradient(50% 30% at 100% 95%,#fbd8df 0,transparent 70%),var(--bg)}
+h1,h2,h3,.logo,.price,.perk b,.item b,.sum b,.dh h2{font-family:Comfortaa,system-ui,sans-serif;font-weight:700;font-style:normal;letter-spacing:-.01em}
+.hero h1{font-size:clamp(2rem,6.6vw,3.8rem);line-height:1.12;letter-spacing:-.02em}.hero h1 i{font-style:normal}
+.logo{font-size:1.1rem}
+.sels{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.sels select{flex:1 1 100%;width:100%;min-width:0;max-width:100%;border-radius:999px;padding:.5rem .8rem;font-size:.9rem;text-overflow:ellipsis}.card,.card .body{min-width:0}
+.item .sels{margin:.3rem 0}.item .sels select{flex:1 1 100%}.item>div{min-width:0}
+.chip{background:var(--pink2);padding:.4rem .9rem;border-radius:99px;font-weight:700;font-size:.9rem}
+select,.sels select,.card select,.item select{-webkit-appearance:none;appearance:none;cursor:pointer;font-weight:600;line-height:1.3;padding:.65rem 2.6rem .65rem 1.1rem;border:1.5px solid var(--line);border-radius:999px;background-color:var(--surf);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c0334f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:14px 14px;transition:border-color .2s,box-shadow .2s}
+.item select{padding-top:.5rem;padding-bottom:.5rem;font-size:.85rem}
+select:hover{border-color:var(--rose)}
+select:focus-visible{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px color-mix(in srgb,var(--rose) 25%,transparent)}
+select option{background:var(--surf);color:var(--ink);font-weight:500}
+.note{background:var(--pink2);border-radius:20px;padding:.9rem 1.2rem;color:var(--mute);font-size:.92rem;margin-top:1rem}
+html{-webkit-text-size-adjust:100%}
+a,button,select,label,.tab{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+input[type=date]{min-height:48px;-webkit-appearance:none;appearance:none}
+.db{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+@media (max-width:760px){
+ input,textarea,select,.item select,.sels select{font-size:16px}
+ .wrap{width:calc(100% - 2rem)}
+ section{padding:2.5rem 0}
+ .bar{height:60px}nav{top:60px}
+ .hero{padding:1rem 0 2rem}.hero .wrap{gap:1rem}
+ .hero p.sub{font-size:1rem;margin:.8rem 0 1.4rem}
+ .hero .btn{width:100%}
+ .art{max-width:300px}
+ .icon{width:44px;height:44px}
+ .qty button{width:44px;height:44px;font-size:1.3rem}
+ .tab{min-height:44px}
+ .grid{grid-template-columns:1fr;gap:1.1rem}
+ .card{border-radius:26px}
+ .card .pic{aspect-ratio:1/.7}
+ .card .btn{min-height:48px}
+ .perks{grid-template-columns:1fr 1fr;gap:.7rem}
+ .perk{padding:1rem;border-radius:22px}.perk b{font-size:1rem}.perk span{font-size:.8rem}
+ .about .pic{max-width:260px;padding:1.2rem}
+ .contact{padding:1.8rem 1.2rem;border-radius:28px}
+ .contact .btn{width:100%}
+ #drawer{width:100%;height:100dvh;border-radius:0}
+ .df .btn,.db .btn{min-height:50px}
+ .fab{left:1rem;right:1rem;padding:.9rem}
+ footer{padding-bottom:7rem}
+ #toast{bottom:calc(5rem + env(safe-area-inset-bottom,0px))}
+}
+@media (max-width:360px){.perks{grid-template-columns:1fr}.hero h1{font-size:1.9rem}}
+@media (hover:none){.card:hover,.btn:hover,.icon:hover{transform:none}.card:hover .pic svg{transform:none}.art .blob{animation:none}}
+.hero h1 i{white-space:nowrap}
+.art .blob{background:linear-gradient(150deg,#fde3e8,#f6b5c4)}
+.art .cake svg{width:100%;height:100%}
+.dot{background:#fff;opacity:.85;box-shadow:0 6px 14px rgba(192,51,79,.15)}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+ <a class="logo" href="#top">Молочная девочка</a>
+ <nav id="nav" aria-label="Основная навигация"><ul>
+  <li><a href="#top">Главная</a></li><li><a href="#catalog">Каталог</a></li><li><a href="#about">О нас</a></li><li><a href="#contacts">Контакты</a></li>
+ </ul></nav>
+ <div class="tools">
+  <button class="icon" id="cartBtn" aria-label="Открыть корзину"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11H6.2L5 8z"/><path d="M9 8a3 3 0 016 0"/></svg><span id="count">0</span></button>
+  <button class="icon" id="burger" aria-label="Меню" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ </div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+ <div>
+  <h1>Торты, созданные <i>с любовью</i></h1>
+  <p class="sub">Вкусные домашние торты на заказ в Перми</p>
+  <a class="btn" href="#catalog">Выбрать торт</a>
+ </div>
+ <div class="art" aria-hidden="true">
+  <div class="blob"></div>
+  <span class="dot" style="width:46px;height:46px;top:6%;right:12%"></span>
+  <span class="dot" style="width:24px;height:24px;bottom:14%;left:2%"></span>
+  <span class="dot" style="width:16px;height:16px;top:30%;left:0"></span>
+  <div class="cake" id="heroCake"></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="perks rv">
+ <div class="perk"><b>Домашнее приготовление</b><span>Печём на своей кухне, небольшими партиями.</span></div>
+ <div class="perk"><b>Свежие ингредиенты</b><span>Сливки, ягоды и масло — только свежие.</span></div>
+ <div class="perk"><b>Индивидуальный подход</b><span>Обсудим вкус, начинку и оформление.</span></div>
+ <div class="perk"><b>Торты под любой праздник</b><span>От бенто на двоих до торта на банкет.</span></div>
+</div></div></section>
+
+<section id="catalog"><div class="wrap">
+ <h2>Каталог тортов</h2>
+ <p style="color:var(--mute)">Выберите вес, количество и добавьте в корзину.</p><p class="note">Сезонные ягоды для декора — по чеку. Декор из свежих ягод оплачивается отдельно. Торты и бенто можно оформить с шоколадными фигурками и топперами — они в разделе «Индивидуальные заказы».</p>
+ <div class="tabs" id="tabs" role="group" aria-label="Категории"></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="about" class="about"><div class="wrap">
+ <div class="pic rv" id="aboutPic" aria-hidden="true"></div>
+ <div class="rv">
+  <h2>О нас</h2>
+  <p>«Молочная девочка» — домашняя кондитерская в Перми. Мы создаём вкусные торты с любовью к каждому ингредиенту. Каждый заказ готовится с вниманием к деталям, чтобы сделать ваш праздник ещё приятнее.</p>
+ </div>
+</div></section>
+
+<section id="contacts" style="padding-top:1rem"><div class="wrap"><div class="contact rv">
+ <div>
+  <h2>Контакты</h2>
+  <p style="color:var(--mute);margin-bottom:1.4rem">Обсудим ваш торт и дату получения.</p>
+  <a class="btn" data-vk target="_blank" rel="noopener" href="#">Написать ВКонтакте</a>
+ </div>
+ <dl>
+  <div><dt>Название</dt><dd>Молочная девочка</dd></div>
+  <div><dt>Город</dt><dd>Пермь</dd></div>
+  <div><dt>Телефон</dt><dd id="cPhone"></dd></div>
+  <div><dt>График работы</dt><dd id="cHours"></dd></div>
+ </dl>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+ <div><a class="logo" href="#top">Молочная девочка</a><p style="color:var(--mute);margin-top:.5rem">Домашняя кондитерская в Перми. Торты на заказ.</p></div>
+ <div><b>Навигация</b><ul><li><a href="#top">Главная</a></li><li><a href="#catalog">Каталог</a></li><li><a href="#about">О нас</a></li><li><a href="#contacts">Контакты</a></li></ul></div>
+ <div><b>Контакты</b><ul><li>Пермь</li><li id="fPhone"></li><li id="fHours"></li><li><a data-vk target="_blank" rel="noopener" href="#">ВКонтакте</a></li></ul></div>
+ <small>© <span id="yr"></span> Молочная девочка. Все права защищены.</small>
+</div></footer>
+
+<a class="btn fab" data-vk target="_blank" rel="noopener" href="#">Написать ВКонтакте</a>
+
+<div id="veil"></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-label="Корзина" aria-hidden="true">
+ <div class="dh"><h2>Корзина</h2><button class="icon" id="closeCart" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+ <div class="db" id="cartBody"></div>
+ <div class="df" id="cartFoot"></div>
+</aside>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== Настройки: меняйте здесь ===== */
+const CONFIG={
+ vk:"https://vk.ru/im/convo/-180866866?entrypoint=community_page&tab=all",
+ phone:"+7 (000) 000-00-00",
+ hours:"Ежедневно, 10:00–20:00"
+};
+/* Товары из прайс-листа. Цены, веса и описания можно менять здесь */
+const J=["Вишнёвый","Клубничный","Чёрная смородина"],J5=["Вишня","Клубника","Чёрная смородина","Персик-манго","Малина"];
+const kgv=(pk,l)=>l.map(k=>({w:String(k).replace(".",",")+" кг",p:Math.round(pk*k)}));
+const KG=[1,1.5,2,2.5,3];
+const CATS=["Все","Бенто-торты","Классические торты","Капкейки","Индивидуальные заказы"];
+const PRODUCTS=[
+ {id:"b1",cat:"Бенто-торты",name:"Бенто «Ванильный»",desc:"Шифоновый ванильный бисквит, крем-чиз на сливках, конфитюр на выбор.",v:[{w:"450–500 г",p:950}],o:{l:"Конфитюр",a:J},c:["#fde6ea","#f9d0d9","#c0334f"],t:0},
+ {id:"b2",cat:"Бенто-торты",name:"Бенто «Чёрный лес»",desc:"Шоколадный бисквит, крем-чиз на сливках, конфитюр на выбор.",v:[{w:"450–500 г",p:950}],o:{l:"Конфитюр",a:J},c:["#f6d9de","#8f4a58","#6b1526"],t:1},
+ {id:"b3",cat:"Бенто-торты",name:"Бенто «Медовый»",desc:"Медовые коржи и сметанно-заварной крем.",v:[{w:"450–500 г",p:950}],c:["#fde9d0","#e8b878","#c98a4a"],t:2},
+ {id:"k1",cat:"Классические торты",name:"«Молочная девочка»",desc:"Коржи из сгущённого молока, сметанно-заварной крем, конфитюр на выбор. 1800 ₽/кг.",v:kgv(1800,KG),o:{l:"Конфитюр",a:J},c:["#fff","#f9d0d9","#c0334f"],t:3},
+ {id:"k2",cat:"Классические торты",name:"«Нежный»",desc:"Шифоновый ванильный бисквит, крем-чиз на сливках, конфитюр на выбор. 1900 ₽/кг.",v:kgv(1900,KG),o:{l:"Конфитюр",a:J},c:["#fff3ee","#fde6ea","#e58ba0"],t:0},
+ {id:"k3",cat:"Классические торты",name:"«Чёрный лес»",desc:"Шоколадный бисквит, крем-чиз на сливках, конфитюр на выбор. 1900 ₽/кг.",v:kgv(1900,KG),o:{l:"Конфитюр",a:J},c:["#f6d9de","#8f4a58","#6b1526"],t:1},
+ {id:"k4",cat:"Классические торты",name:"«Медовый»",desc:"Медовые коржи и сметанно-заварной крем. 1800 ₽/кг.",v:kgv(1800,KG),c:["#fde9d0","#e8b878","#c98a4a"],t:2},
+ {id:"k5",cat:"Классические торты",name:"«Красный бархат»",desc:"Ванильные красные коржи, крем-чиз на сливках, конфитюр на выбор. 1900 ₽/кг.",v:kgv(1900,KG),o:{l:"Конфитюр",a:J},c:["#fff3f0","#e46b7e","#a3213b"],t:0},
+ {id:"c1",cat:"Капкейки",name:"Капкейки «Ванильные»",desc:"Ванильный бисквит, крем-чиз на сливках, начинка на выбор.",v:[{w:"1 шт.",p:170}],hideW:1,min:4,o:{l:"Начинка",a:J5},c:["#fde6ea","#fff","#c0334f"],t:0},
+ {id:"c2",cat:"Капкейки",name:"Капкейки «Шоколадные»",desc:"Шоколадный бисквит, крем-чиз на сливках, начинка на выбор.",v:[{w:"1 шт.",p:170}],hideW:1,min:4,o:{l:"Начинка",a:J5},c:["#f6d9de","#8f4a58","#6b1526"],t:1},
+ {id:"c3",cat:"Капкейки",name:"Капкейки «Ванильные маковые»",desc:"Ванильный маковый бисквит, лимонная начинка, крем-чиз на сливках.",v:[{w:"1 шт.",p:170}],hideW:1,min:4,c:["#fff8e0","#fff","#e4b968"],t:0},
+ {id:"d1",cat:"Индивидуальные заказы",name:"Шоколадные фигурки",desc:"Декор к торту. Укажите в комментарии, к какому торту и какие фигурки.",v:[{w:"1 шт.",p:150}],hideW:1,c:["#f6d9de","#8f4a58","#6b1526"],t:1},
+ {id:"d2",cat:"Индивидуальные заказы",name:"Топпер из сахарной бумаги",desc:"Надпись или картинка на торт. Текст и пожелания напишите в комментарии.",v:[{w:"1 шт.",p:300}],hideW:1,c:["#fff","#fde6ea","#c0334f"],t:0},
+ {id:"d3",cat:"Индивидуальные заказы",name:"Посыпки и мелкие украшения",desc:"Бесплатно к любому торту. Укажите пожелания в комментарии.",v:[{w:"1 набор",p:0}],hideW:1,c:["#fde9d0","#fde6ea","#e58ba0"],t:3}
+];
+/* ===== Иллюстрация торта (SVG) ===== */
+let CK=0;
+function tier(x,y,w,h,sp,gl,dr){const id="ck"+(CK++);
+ return `<clipPath id="${id}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14"/></clipPath><g clip-path="url(#${id})"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#fff8f3"/><rect x="${x}" y="${y+h*.4}" width="${w}" height="${h*.12}" fill="${sp}"/><rect x="${x}" y="${y+h*.72}" width="${w}" height="${h*.12}" fill="${sp}"/><rect x="${x}" y="${y}" width="${w}" height="${h*.2}" fill="${gl}"/>${dr.map(d=>`<rect x="${x+d[0]*w}" y="${y}" width="${w*.1}" height="${h*(.2+d[1])}" rx="${w*.05}" fill="${gl}"/>`).join("")}<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#sh)"/></g>`}
+const cherry=(x,y)=>`<path d="M${x} ${y} q3-12 11-16" stroke="#5f8a45" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="${x}" cy="${y}" r="8" fill="#c0334f"/><circle cx="${x-2.5}" cy="${y-2.5}" r="2.3" fill="#fff" opacity=".6"/>`;
+const swirl=(x,y,w)=>[-1,0,1].map(i=>`<circle cx="${x+i*w*.28}" cy="${y-(i?0:5)}" r="${w*.13}" fill="#fff"/>`).join("");
+function cake(c,t){const sp=c[1],gl=c[2];
+ let s=`<svg viewBox="0 0 200 190" role="img" aria-label="Торт" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".09"/><stop offset=".4" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".1"/></linearGradient></defs><ellipse cx="100" cy="176" rx="84" ry="8" fill="#c0334f" opacity=".14"/><ellipse cx="100" cy="170" rx="80" ry="9" fill="#fff"/>`;
+ if(t===3)s+=tier(34,114,132,56,sp,gl,[[.1,.2],[.38,.5],[.65,.1],[.82,.35]])+tier(62,72,76,46,sp,gl,[[.12,.25],[.45,.45],[.75,.15]])+swirl(100,72,76)+`<rect x="98" y="40" width="4" height="20" rx="2" fill="#fde9d0"/><ellipse cx="100" cy="35" rx="4" ry="6" fill="#ffb84a"/>`+cherry(78,58)+cherry(124,60);
+ else s+=tier(48,92,104,78,sp,gl,[[.1,.25],[.36,.5],[.62,.15],[.82,.4]])+swirl(100,92,104)+(t===1?cherry(82,72)+cherry(120,74):cherry(100,70));
+ return s+"</svg>"}
+/* ===== Состояние ===== */
+const $=s=>document.querySelector(s),rub=n=>n?n.toLocaleString("ru-RU")+" ₽":"бесплатно";
+let cart=[],cat="Все",sel={},stage="cart",lastText="";
+const prod=id=>PRODUCTS.find(p=>p.id===id);
+try{cart=JSON.parse(localStorage.getItem("mdCart2")||"[]").filter(i=>prod(i.id)&&prod(i.id).v.some(v=>v.w===i.w))}catch(e){}
+const save=()=>{try{localStorage.setItem("mdCart2",JSON.stringify(cart))}catch(e){}};
+const price=i=>prod(i.id).v.find(v=>v.w===i.w).p;
+const total=()=>cart.reduce((s,i)=>s+price(i)*i.q,0);
+const label=(p,j)=>p.name+(j?` (${p.o.l.toLowerCase()}: ${j.toLowerCase()})`:"");
+const wSel=(p,cur,a)=>p.v.length>1?`<select ${a} aria-label="Вес">${p.v.map(v=>`<option ${v.w===cur?"selected":""}>${v.w}</option>`).join("")}</select>`:(p.hideW?"":`<span class="chip">${p.v[0].w}</span>`);
+const oSel=(p,cur,a)=>p.o?`<select ${a} aria-label="${p.o.l}">${p.o.a.map(x=>`<option value="${x}" ${x===cur?"selected":""}>${p.o.l}: ${x}</option>`).join("")}</select>`:"";
+let tt;function toast(m,ms=4500){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),ms)}
+/* ===== Каталог ===== */
+function renderTabs(){$("#tabs").innerHTML=CATS.map(c=>`<button class="tab" aria-pressed="${c===cat}" data-cat="${c}">${c}</button>`).join("")}
+function renderGrid(){
+ $("#grid").innerHTML=PRODUCTS.filter(p=>cat==="Все"||p.cat===cat).map(p=>{
+  const s=sel[p.id]||(sel[p.id]={w:p.v[0].w,q:p.min||1,j:p.o?p.o.a[0]:""});
+  const cur=p.v.find(v=>v.w===s.w);
+  return `<article class="card rv" data-id="${p.id}"><div class="pic" style="background:${p.c[0]}">${cake(p.c,p.t)}</div><div class="body">
+  <h3>${p.name}</h3><p class="d">${p.desc}</p>
+  <div class="sels">${wSel(p,s.w,"data-w")}${oSel(p,s.j,"data-o")}</div>
+  <div class="row"><div class="qty"><button data-m aria-label="Меньше">−</button><span>${s.q}</span><button data-p aria-label="Больше">+</button></div><span class="price">${rub(cur.p*s.q)}</span></div>
+  ${p.min?`<small style="color:var(--mute)">Заказ от ${p.min} штук</small>`:""}
+  <button class="btn" data-add>Добавить в корзину</button></div></article>`}).join("");
+ observe();
+}
+$("#tabs").onclick=e=>{const b=e.target.closest("[data-cat]");if(!b)return;cat=b.dataset.cat;renderTabs();renderGrid()};
+$("#grid").onclick=e=>{
+ const card=e.target.closest(".card");if(!card)return;const id=card.dataset.id,s=sel[id],p=prod(id);
+ if(e.target.closest("[data-m]")){s.q=Math.max(p.min||1,s.q-1);upd(card,id)}
+ else if(e.target.closest("[data-p]")){s.q=Math.min(50,s.q+1);upd(card,id)}
+ else if(e.target.closest("[data-add]")){addItem(id,s.w,s.q,s.j);s.q=p.min||1;upd(card,id);toast("«"+p.name+"» добавлен в корзину")}
+};
+$("#grid").onchange=e=>{const c=e.target.closest(".card");if(!c)return;const s=sel[c.dataset.id];
+ if(e.target.matches("[data-w]"))s.w=e.target.value;else if(e.target.matches("[data-o]"))s.j=e.target.value;upd(c,c.dataset.id)};
+function upd(card,id){const s=sel[id];card.querySelector(".qty span").textContent=s.q;card.querySelector(".price").textContent=rub(prod(id).v.find(v=>v.w===s.w).p*s.q)}
+/* ===== Корзина ===== */
+const same=(a,b)=>a.id===b.id&&a.w===b.w&&(a.j||"")===(b.j||"");
+function merge(){const m=[];cart.forEach(i=>{const f=m.find(x=>same(x,i));f?f.q=Math.min(50,f.q+i.q):m.push(i)});cart=m}
+function addItem(id,w,q,j){cart.push({id,w,q,j:j||""});merge();commit();const c=$("#count");c.classList.remove("bump");void c.offsetWidth;c.classList.add("bump")}
+function commit(){save();$("#count").textContent=cart.reduce((s,i)=>s+i.q,0);renderCart()}
+function openCart(o){$("#drawer").classList.toggle("on",o);$("#veil").classList.toggle("on",o);$("#drawer").setAttribute("aria-hidden",!o);document.body.style.overflow=o?"hidden":"";document.documentElement.style.overflow=o?"hidden":"";if(o)renderCart()}
+$("#cartBtn").onclick=()=>openCart(true);$("#closeCart").onclick=()=>openCart(false);$("#veil").onclick=()=>openCart(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")openCart(false)});
+const tomorrow=()=>{const d=new Date(Date.now()+864e5);return d.toISOString().slice(0,10)};
+function renderCart(){
+ const body=$("#cartBody"),foot=$("#cartFoot");
+ if(stage==="done"){
+  body.innerHTML=`<div class="done"><b>Заявка скопирована, чат ВКонтакте открыт</b><p>Вставьте текст в сообщение сообщества и отправьте его. Заказ принимается только после отправки сообщения. Если вставить не получилось, возьмите текст отсюда:</p><textarea id="txt" readonly>${lastText}</textarea><button class="btn ghost" id="again">Скопировать ещё раз</button><a class="btn ghost" target="_blank" href="${CONFIG.vk}">Открыть диалог ВКонтакте</a></div>`;
+  foot.innerHTML=`<button class="btn" id="sent">Я отправил заявку, очистить корзину</button><button class="btn ghost" id="back" style="margin-top:.5rem">Вернуться к корзине</button>`;
+  $("#again").onclick=()=>copy(lastText).then(()=>toast("Текст заявки скопирован"));
+  $("#sent").onclick=()=>{cart=[];stage="cart";commit();openCart(false);toast("Спасибо! Мы свяжемся с вами в ВКонтакте.")};
+  $("#back").onclick=()=>{stage="cart";renderCart()};return}
+ if(!cart.length){body.innerHTML=`<div class="empty"><p>В корзине пока пусто.</p><p style="margin:.6rem 0 1.4rem">Выберите торт в каталоге.</p><button class="btn" id="go">Перейти в каталог</button></div>`;foot.innerHTML="";$("#go").onclick=()=>{openCart(false);location.hash="catalog"};return}
+ body.innerHTML=cart.map((i,n)=>{const p=prod(i.id);return `<div class="item" data-n="${n}"><div class="th" style="background:${p.c[0]}">${cake(p.c,p.t)}</div><div><b>${p.name}</b><div class="sels">${wSel(p,i.w,"data-iw")}${oSel(p,i.j,"data-io")}</div><div class="qty"><button data-im aria-label="Меньше">−</button><span>${i.q}</span><button data-ip aria-label="Больше">+</button></div></div><div class="r"><b>${rub(price(i)*i.q)}</b><button class="x" data-del>Удалить</button></div></div>`}).join("")+
+ `<button class="btn ghost" id="more" style="margin-top:1rem;width:100%">Продолжить покупки</button>
+ <form id="f" novalidate><label>Имя<input name="name" autocomplete="name" required><span class="err"></span></label>
+ <label>Телефон<input name="phone" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required><span class="err"></span></label>
+ <label>Желаемая дата получения<input name="date" type="date" min="${tomorrow()}" required><span class="err"></span></label>
+ <label>Комментарий (необязательно)<textarea name="comment" rows="3"></textarea></label></form>`;
+ foot.innerHTML=`<div class="sum"><span>Итого</span><b>${rub(total())}</b></div><button class="btn" id="send">Отправить заказ в ВКонтакте</button>`;
+ $("#more").onclick=()=>{openCart(false);location.hash="catalog"};
+ $("#send").onclick=submit;
+}
+$("#cartBody").onclick=e=>{const it=e.target.closest(".item");if(!it)return;const i=cart[+it.dataset.n],p=prod(i.id);
+ if(e.target.closest("[data-im]"))i.q=Math.max(p.min||1,i.q-1);else if(e.target.closest("[data-ip]"))i.q=Math.min(50,i.q+1);
+ else if(e.target.closest("[data-del]"))cart.splice(+it.dataset.n,1);else return;keepForm()};
+$("#cartBody").onchange=e=>{const t=e.target,it=t.closest(".item");if(!it)return;const i=cart[+it.dataset.n];
+ if(t.matches("[data-iw]"))i.w=t.value;else if(t.matches("[data-io]"))i.j=t.value;else return;merge();keepForm()};
+function keepForm(){const f=$("#f"),v=f?Object.fromEntries(new FormData(f)):null;commit();if(v&&$("#f"))for(const k in v)$("#f").elements[k].value=v[k]}
+/* ===== Отправка в VK ===== */
+function copy(t){return(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(()=>{const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}a.remove()})}
+function submit(){
+ const f=$("#f"),d=Object.fromEntries(new FormData(f));let ok=true;
+ const bad=(n,m)=>{const el=f.elements[n];el.classList.add("bad");el.nextElementSibling.textContent=m;ok=false};
+ f.querySelectorAll("input").forEach(x=>{x.classList.remove("bad");x.nextElementSibling.textContent=""});
+ d.name=d.name.trim();d.phone=d.phone.trim();
+ if(d.name.length<2)bad("name","Укажите имя");
+ if(d.phone.replace(/\D/g,"").length<10||!/^[\d\s+()\-]+$/.test(d.phone))bad("phone","Введите телефон, например +7 900 000-00-00");
+ if(!d.date)bad("date","Выберите дату");else if(d.date<tomorrow())bad("date","Дата должна быть не раньше завтрашнего дня");
+ if(!ok){f.querySelector(".bad").focus();return}
+ const [y,m,dd]=d.date.split("-");
+ lastText=`Здравствуйте! Хочу оформить заказ.\n\nИмя: ${d.name}\nТелефон: ${d.phone}\nДата получения: ${dd}.${m}.${y}\n\nМой заказ:\n`+
+  cart.map(i=>{const p=prod(i.id);return `- ${label(p,i.j)}${p.hideW?"":" — "+i.w} — ${i.q} шт. — ${rub(price(i)*i.q)}`}).join("\n")+
+  `\n\nИтого: ${total().toLocaleString("ru-RU")} ₽\n\nКомментарий: ${d.comment.trim()||"—"}`;
+ copy(lastText);
+ const w=window.open(CONFIG.vk,"_blank");
+ stage="done";renderCart();
+ toast("Заказ сформирован! Вставьте текст заявки в сообщения сообщества и отправьте его",7000);
+ if(!w)location.href=CONFIG.vk;
+}
+/* ===== Остальное ===== */
+document.querySelectorAll("[data-vk]").forEach(a=>a.href=CONFIG.vk);
+$("#cPhone").textContent=$("#fPhone").textContent=CONFIG.phone;$("#cHours").textContent=$("#fHours").textContent=CONFIG.hours;
+$("#yr").textContent=new Date().getFullYear();
+$("#heroCake").innerHTML=cake(["#fff","#f7d3d8","#d9697f"],3);
+$("#aboutPic").innerHTML=cake(["#fff3f0","#fbe8ea","#d9697f"],2);
+$("#burger").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+$("#nav").onclick=e=>{if(e.target.closest("a"))$("#nav").classList.remove("open")};
+let io;function observe(){io=io||new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el))}
+renderTabs();renderGrid();commit();observe();
+</script>
+</body>
+</html>
